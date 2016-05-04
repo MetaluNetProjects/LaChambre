@@ -1,4 +1,4 @@
-#N canvas 553 130 883 736 10;
+#N canvas 553 128 883 744 10;
 #X declare -stdpath moonlib;
 #X declare -stdpath hcs;
 #X declare -stdpath ggee;
@@ -6,28 +6,28 @@
 #X declare -lib zexy;
 #X declare -stdpath Fraise;
 #X obj 21 38 pied/pied 0 41424;
-#X msg 199 474 c 120 c 4 i \$1;
-#X obj 202 450 hsl 128 15 -1023 1023 0 0 empty empty empty -2 -8 0
+#X msg 195 437 c 120 c 4 i \$1;
+#X obj 198 413 hsl 128 15 -1023 1023 0 0 empty empty empty -2 -8 0
 10 -262144 -1 -1 0 1;
-#X obj 202 512 hsl 128 15 -1023 1023 0 0 empty empty empty -2 -8 0
+#X obj 198 475 hsl 128 15 -1023 1023 0 0 empty empty empty -2 -8 0
 10 -262144 -1 -1 0 1;
-#X msg 199 536 c 121 c 4 i \$1;
-#X msg 171 423 0;
+#X msg 195 499 c 121 c 4 i \$1;
+#X msg 167 386 0;
 #X obj 21 17 declare -stdpath Fraise;
 #X obj 19 141 fruit/fruit 1 grada 11 gradaphone;
 #X obj 247 22 fruit/receive grada;
 #X obj 50 607 fruit/send2 grada;
-#X obj 349 490 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 345 453 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 350 509 t b f;
-#X msg 361 562 0;
-#X floatatom 367 593 5 0 0 0 - - -, f 5;
-#X obj 396 534 * 1024;
-#X obj 395 556 - 512;
-#X obj 348 451 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 346 472 t b f;
+#X msg 357 525 0;
+#X floatatom 368 563 5 0 0 0 - - -, f 5;
+#X obj 392 497 * 1024;
+#X obj 391 519 - 512;
+#X obj 344 414 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X floatatom 412 469 5 0 0 0 - - -, f 5;
-#X floatatom 430 499 5 0 0 0 - - -, f 5;
+#X floatatom 408 432 5 0 0 0 - - -, f 5;
+#X floatatom 426 462 5 0 0 0 - - -, f 5;
 #N canvas 132 165 542 297 dimmers 0;
 #X obj 111 132 vsl 15 128 0 1 0 0 dimmer1 dimmer1 1 0 -9 0 10 -262144
 -1 -1 0 1;
@@ -66,8 +66,8 @@
 #X restore 37 313 pd dimmers;
 #X msg 40 485 c 40 c \$1 i \$2;
 #X obj 247 44 route s;
-#X obj 247 90 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
+#X obj 247 189 tgl 50 0 empty empty empty 17 7 0 10 -4034 -1 -1 0 1
+;
 #N canvas 75 433 486 365 test 0;
 #X obj 82 43 vsl 15 128 0 1 0 0 empty empty 0 0 -9 0 10 -262144 -1
 -1 0 1;
@@ -125,9 +125,9 @@
 #X connect 20 0 0 0;
 #X connect 21 0 4 0;
 #X restore 64 522 pd test;
-#X obj 348 428 metro 2000;
-#X obj 418 423 sel 0;
-#X msg 418 445 0;
+#X obj 344 391 metro 2000;
+#X obj 414 386 sel 0;
+#X msg 414 408 0;
 #X obj 502 61 fruit/fruit 1 horloge 12 horloge;
 #X msg 593 591 0 \$1;
 #X msg 593 552 0;
@@ -157,31 +157,43 @@
 1;
 #X floatatom 720 466 5 0 0 0 - - -, f 5;
 #X obj 719 487 min 0;
-#X obj 348 393 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 344 356 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 350 468 metro 22;
-#X obj 350 534 del 12;
-#X obj 348 365 r phone-sonne;
+#X obj 346 431 metro 22;
+#X obj 346 497 del 12;
+#X obj 344 328 r phone-sonne;
 #X obj 272 92 == 0;
 #X obj 272 169 s mouvement;
-#X obj 247 190 s phone-decroche;
+#X obj 247 242 s phone-decroche;
 #X obj 771 424 r horloge-carillon;
 #X obj 771 445 * 20;
-#X obj 709 358 * 150;
-#X obj 709 337 r horloge-aiguilles;
+#X obj 751 322 * 150;
+#X obj 751 301 r horloge-aiguilles;
 #X obj 505 146 route s;
 #X obj 505 168 route 0 1;
 #X obj 505 124 fruit/receive horloge;
-#X obj 530 256 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 530 256 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 605 307 sel 1;
 #X msg 609 363 0;
 #X obj 507 222 change;
-#X obj 505 200 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 505 200 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X msg 723 435 -50;
-#X msg 677 444 50;
 #X obj 605 337 del 10;
+#X obj 681 339 del 10000;
+#X msg 679 376 0;
+#X obj 686 310 t b f;
+#X msg 682 284 -20;
+#X msg 724 281 -11;
+#X msg 726 258 11;
+#X msg 677 444 100;
+#X obj 221 712 dac~;
+#X obj 205 633 readsf~;
+#X msg 208 608 open wavs/Son_téléphone_Régina.wav \, 1;
+#X msg 278 635 open wavs/son_telephone_Madelain.wav \, 1;
+#X obj 222 681 lp4_butt~ 4000;
+#X obj 221 659 hp4_butt~ 400;
 #X connect 1 0 9 0;
 #X connect 2 0 1 0;
 #X connect 3 0 4 0;
@@ -250,11 +262,23 @@
 #X connect 67 0 73 0;
 #X connect 68 0 66 0;
 #X connect 69 0 70 0;
-#X connect 70 0 76 0;
+#X connect 70 0 75 0;
 #X connect 71 0 38 0;
 #X connect 71 0 53 0;
 #X connect 72 0 69 0;
 #X connect 73 0 72 0;
 #X connect 74 0 53 0;
-#X connect 75 0 38 0;
-#X connect 76 0 71 0;
+#X connect 75 0 71 0;
+#X connect 76 0 77 0;
+#X connect 77 0 53 0;
+#X connect 78 0 76 0;
+#X connect 78 1 41 0;
+#X connect 79 0 78 0;
+#X connect 80 0 78 0;
+#X connect 81 0 78 0;
+#X connect 82 0 38 0;
+#X connect 84 0 88 0;
+#X connect 85 0 84 0;
+#X connect 86 0 84 0;
+#X connect 87 0 83 0;
+#X connect 88 0 87 0;
