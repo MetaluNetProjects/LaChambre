@@ -1,0 +1,63 @@
+#N canvas 743 101 579 638 10;
+#X declare -lib pof;
+#X obj 231 102 pofwin;
+#X obj 38 92 pofhead;
+#X msg 98 395 load \$1;
+#X obj 98 243 openpanel;
+#X obj 64 235 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 236 418 play \$1;
+#X obj 236 393 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X msg 98 278 set symbol \$1;
+#X msg 98 304 symbol /home/panorama18/Téléchargements/Timecoded_Big_bunny_1.mov
+;
+#X msg 236 501 speed \$1;
+#X obj 244 479 hsl 128 15 0 2 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 38 134 poftranslate;
+#X msg 257 449 1;
+#X msg 224 452 0;
+#X obj 41 38 declare -lib pof;
+#X floatatom 186 564 5 0 0 0 - - -, f 5;
+#X floatatom 266 553 5 0 0 0 - - -, f 5;
+#N canvas 1326 146 450 300 testfullscreen 1;
+#X obj 232 103 bng 15 250 50 0 empty empty empty 17 7 0 10 -260097
+-1 -1;
+#X obj 232 150 t b a;
+#X obj 232 174 del 2000;
+#X obj 232 218 t a;
+#X obj 232 246 outlet;
+#X msg 329 68 800 1920;
+#X floatatom 355 107 5 0 0 0 - - -, f 5;
+#X obj 325 95 +;
+#X msg 232 196 window 1920 1080 0;
+#X msg 232 130 pos 0 0 \, window 1920 1080 1 \, cursor 0;
+#X connect 0 0 9 0;
+#X connect 1 0 2 0;
+#X connect 1 1 3 0;
+#X connect 2 0 8 0;
+#X connect 3 0 4 0;
+#X connect 5 0 7 0;
+#X connect 7 0 6 0;
+#X connect 8 0 3 0;
+#X connect 9 0 1 0;
+#X coords 0 -1 1 1 150 20 1 100 100;
+#X restore 228 68 pd testfullscreen;
+#X obj 37 602 poffilm 2720 1080;
+#X connect 1 0 11 0;
+#X connect 2 0 18 0;
+#X connect 3 0 7 0;
+#X connect 4 0 3 0;
+#X connect 5 0 18 0;
+#X connect 6 0 5 0;
+#X connect 7 0 8 0;
+#X connect 8 0 2 0;
+#X connect 9 0 18 0;
+#X connect 10 0 9 0;
+#X connect 11 0 18 0;
+#X connect 12 0 10 0;
+#X connect 13 0 10 0;
+#X connect 15 0 18 1;
+#X connect 16 0 18 2;
+#X connect 17 0 0 0;
