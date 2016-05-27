@@ -1,2 +1,66 @@
 # attente spectateur
+PART_A
+0 0 0 reset
+0 0 0 abatjour1 1
+0 0 0 abatjour2 1
+0 45 0 horloge -1
+1 0 0 abatjour1 0 10
+1 0 0 abatjour2 0 10
+1 10 0 horloge 0
+1 10 0 film SEQ1
+1 10 0 tv SEQ1
+6 26 0 abatjour2 1 10
+6 26 0 horloge -0.21
+6 35 0 horloge 0
+6 36 0 tv ARCHIVE
+9 17 0 abatjour2 0 5
+9 22 0 film SEQ2
+9 22 0 tv SEQ2
+11 45 0 lumfenetre 1 10 
+11 45 0 horloge 1
+11 55 0 horloge 0
+12 0 0 telephone 1
 
+PART_B
+0 0 0 lumfenetre 0 10
+0 0 0 horloge -0.5
+0 10 0 horloge 0
+0 10 0 film SEQ3
+0 10 0 tv SEQ3
+4 4 0 lumfenetre 1 11
+4 4 0 horloge 0.2
+4 15 0 horloge 0
+4 15 0 son ENFANTS
+5 0 0 lumfenetre 0 5
+5 5 0 film SEQ5
+7 20 0 lumfenetre 0.5 10
+7 20 0 abatjour1 1 10
+7 20 0 abatjour2 1 10
+7 20 0 horloge 1
+7 30 0 horloge 0
+7 30 0 telephone 2
+
+PART_C
+0 0 0 lumfenetre 0
+0 0 0 abatjour1 0
+0 0 0 abatjour2 0
+0 0 0 horloge 0.1
+0 10 0 horloge 0
+0 10 0 film SEQ4
+0 10 0 tv SEQ4
+4 34 0 lumfenetre 1 10
+4 44 0 tv INFO
+8 09 0 lumfenetre 0 11
+8 09 0 abatjour1 1 11
+8 09 0 abatjour2 1 11
+8 09 0 horloge -0.2
+8 20 0 horloge 0
+8 20 0 son TABLE
+9 28 0 tv CADAVRE
+10 30 0 abatjour1 0 5
+10 30 0 abatjour2 0 5
+10 35 0 film SEQ6
+10 35 0 tv SEQ6
+16 15 0 tv NEIGE
+16 30 0 reset
+16 30 0 loop
