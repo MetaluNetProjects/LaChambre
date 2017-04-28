@@ -1,0 +1,37 @@
+#N canvas 65 87 407 383 10;
+#X obj 76 37 inlet;
+#X obj 92 248 s phone-sonne;
+#X msg 124 189 0;
+#X obj 76 64 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 64 186 1;
+#X obj 92 227 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 97 145 del 11000;
+#X obj 244 87 r phone-decroche;
+#X obj 244 110 spigot;
+#X obj 244 135 sel 1;
+#X msg 246 203 0;
+#X msg 207 200 stop;
+#X obj 97 166 t b b;
+#X obj 149 278 outlet no;
+#X obj 302 277 outlet yes;
+#X obj 244 155 t b b;
+#X connect 0 0 3 0;
+#X connect 2 0 5 0;
+#X connect 3 0 4 0;
+#X connect 3 0 6 0;
+#X connect 4 0 5 0;
+#X connect 5 0 1 0;
+#X connect 5 0 8 1;
+#X connect 6 0 12 0;
+#X connect 7 0 8 0;
+#X connect 8 0 9 0;
+#X connect 9 0 15 0;
+#X connect 10 0 5 0;
+#X connect 11 0 6 0;
+#X connect 12 0 13 0;
+#X connect 12 1 2 0;
+#X connect 15 0 14 0;
+#X connect 15 1 10 0;
+#X connect 15 1 11 0;

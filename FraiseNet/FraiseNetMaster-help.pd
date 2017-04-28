@@ -1,0 +1,12 @@
+#N canvas 192 320 410 288 10;
+#X declare -stdpath moonlib;
+#X declare -stdpath hcs;
+#X declare -stdpath ggee;
+#X declare -stdpath zexy;
+#X declare -lib zexy;
+#X declare -stdpath Fraise;
+#X obj 42 128 FraiseNetMaster \$0;
+#X obj 43 51 pied/pied 0 112233;
+#X obj 43 27 declare -stdpath Fraise;
+#X obj 43 150 PdServeur \$0 424242;
+#X coords 0 0 1 1 50 50 0;

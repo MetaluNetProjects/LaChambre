@@ -1,27 +1,9 @@
-#N canvas 743 101 579 638 10;
-#X declare -lib pof;
-#X obj 231 102 pofwin;
-#X obj 38 92 pofhead;
-#X msg 98 395 load \$1;
-#X obj 98 243 openpanel;
-#X obj 64 235 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X msg 236 418 play \$1;
-#X obj 236 393 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
-1;
-#X msg 98 278 set symbol \$1;
-#X msg 98 304 symbol /home/panorama18/Téléchargements/Timecoded_Big_bunny_1.mov
-;
-#X msg 236 501 speed \$1;
-#X obj 244 479 hsl 128 15 0 2 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
-#X obj 38 134 poftranslate;
-#X msg 257 449 1;
-#X msg 224 452 0;
-#X obj 41 38 declare -lib pof;
-#X floatatom 186 564 5 0 0 0 - - -, f 5;
-#X floatatom 266 553 5 0 0 0 - - -, f 5;
-#N canvas 1326 146 450 300 testfullscreen 1;
+#N canvas 306 241 929 754 10;
+#X obj 488 437 pofwin;
+#X obj 30 50 pofhead;
+#X floatatom 73 462 5 0 0 0 - - -, f 5;
+#X floatatom 123 460 5 0 0 0 - - -, f 5;
+#N canvas 66 425 603 341 testfullscreen 0;
 #X obj 232 103 bng 15 250 50 0 empty empty empty 17 7 0 10 -260097
 -1 -1;
 #X obj 232 150 t b a;
@@ -32,8 +14,11 @@
 #X floatatom 355 107 5 0 0 0 - - -, f 5;
 #X obj 325 95 +;
 #X msg 232 196 window 1920 1080 0;
-#X msg 232 130 pos 0 0 \, window 1920 1080 1 \, cursor 0;
-#X connect 0 0 9 0;
+#X msg 285 224 window 800 600 0;
+#X msg 287 154 pos 0 0 \, window 1920 1080 1 \, cursor 0;
+#X msg 232 130 pos 3000 0 \, window 1920 1080 1 \, cursor 0;
+#X msg 327 267 pos 0 0 \, window 1920 1080 1 \, cursor 0;
+#X connect 0 0 11 0;
 #X connect 1 0 2 0;
 #X connect 1 1 3 0;
 #X connect 2 0 8 0;
@@ -41,23 +26,166 @@
 #X connect 5 0 7 0;
 #X connect 7 0 6 0;
 #X connect 8 0 3 0;
-#X connect 9 0 1 0;
+#X connect 9 0 3 0;
+#X connect 11 0 1 0;
 #X coords 0 -1 1 1 150 20 1 100 100;
-#X restore 228 68 pd testfullscreen;
-#X obj 37 602 poffilm 2720 1080;
-#X connect 1 0 11 0;
-#X connect 2 0 18 0;
-#X connect 3 0 7 0;
+#X restore 593 444 pd testfullscreen;
+#X obj 30 82 t a a;
+#X obj 200 151 poftouch 4000 4000;
+#X obj 305 172 route down;
+#X obj 305 217 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 487 371 sel 0 1;
+#X msg 381 153 1;
+#X obj 305 194 b;
+#X obj 178 486 l 2720 1080;
+#X obj 24 484 poffilm 1920 1080;
+#X obj 543 151 r seq-conduite-line;
+#X obj 543 174 route film;
+#X obj 96 267 symbol;
+#X obj 95 297 pack s s;
+#N canvas 1 82 631 479 tests 0;
+#X msg 125 201 load \$1;
+#X obj 125 91 openpanel;
+#X obj 108 68 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 195 214 play \$1;
+#X obj 195 189 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 125 126 set symbol \$1;
+#X msg 125 152 symbol /home/panorama18/Téléchargements/Timecoded_Big_bunny_1.mov
+;
+#X msg 211 290 speed \$1;
+#X obj 219 268 hsl 128 15 0 2 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X msg 232 238 1;
+#X msg 199 241 0;
+#X msg 217 96 symbol /home/panorama18/Téléchargements/Timecoded_Big_bunny_1.mov
+;
+#X obj 125 355 outlet;
+#X connect 0 0 12 0;
+#X connect 1 0 5 0;
+#X connect 2 0 1 0;
+#X connect 3 0 12 0;
 #X connect 4 0 3 0;
-#X connect 5 0 18 0;
-#X connect 6 0 5 0;
-#X connect 7 0 8 0;
-#X connect 8 0 2 0;
-#X connect 9 0 18 0;
-#X connect 10 0 9 0;
-#X connect 11 0 18 0;
-#X connect 12 0 10 0;
-#X connect 13 0 10 0;
-#X connect 15 0 18 1;
-#X connect 16 0 18 2;
-#X connect 17 0 0 0;
+#X connect 5 0 6 0;
+#X connect 6 0 0 0;
+#X connect 7 0 12 0;
+#X connect 8 0 7 0;
+#X connect 9 0 8 0;
+#X connect 10 0 8 0;
+#X connect 11 0 0 0;
+#X restore 74 436 pd tests;
+#X obj 414 153 del 1000;
+#X obj 441 181 del 1000;
+#X msg 396 178 0;
+#X obj 381 126 del 1000;
+#X obj 200 129 pofcolor 0 0 0 1;
+#X obj 243 69 loadbang;
+#X msg 243 91 draw 1;
+#X obj 30 110 pofcolor 1 1 1 1;
+#X obj 39 242 route stop;
+#X msg 39 266 0;
+#X msg 109 242 1;
+#X msg 39 355 play 0;
+#X obj 480 59 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 499 56 loadbang;
+#X msg 480 105 symbol \$1/../LaChambreDatas;
+#X obj 480 127 s \$0-datasdir;
+#X obj 141 266 r \$0-datasdir;
+#X obj 480 83 ggee/getdir;
+#X obj 322 33 l netreceive 61525;
+#X obj 45 133 netreceive;
+#X msg 126 79 listen 61525;
+#X obj 159 24 loadbang;
+#X obj 381 101 pofbang 1;
+#X msg 447 101 0;
+#X msg 396 75 1;
+#X obj 159 46 del 1500;
+#X msg 507 397 pos 0 0 \, window 1920 1080 1 \, pos 0 0 \, cursor 0
+;
+#X obj 45 156 route film fullscreen ctl;
+#X obj 83 377 cnv 15 400 50 empty empty empty 20 12 0 14 -257985 -66577
+0;
+#X obj 193 438 print film;
+#X msg 264 543 play 0 \, load \$2/mjpeg/\$1-écran-1280.mov \, goto
+0 \, speed 0 \, play 1 \, speed 0;
+#X msg 264 582 play 0 \, load \$2/mjpeg/\$1-écran-1440.mov \, goto
+0 \, speed 0 \, play 1 \, speed 0;
+#X msg 263 508 play 0 \, load \$2/films-originaux/\$1-écran.mp4 \,
+goto 0 \, speed 0 \, play 1 \, speed 0;
+#X msg 96 385 play 0 \, load \$2/mjpeg/\$1-écran-1280.mov \, goto
+0 \, speed 0 \, play 1 \, speed 0;
+#X text 525 258 \$2 = dossier LaChambreDatas;
+#X text 525 276 \$1 = SEQ1 ou SEQ2...;
+#X obj 43 198 route auto;
+#X obj 212 326 route SEQ5;
+#X msg 124 638 play 0 \, load \$2/films-originaux/\$1-écran.mp4 \,
+goto 0 \, speed 0 \, play 1 \, speed 0;
+#X msg 126 615 SEQ5 \$1;
+#X obj 592 337 del 1000;
+#X msg 601 371 window 800 600 0 pos 100 100;
+#X msg 489 418 pos 150 100 \, window 640 480 0 \, pos 150 150 \, cursor
+1;
+#X connect 1 0 5 0;
+#X connect 1 0 41 0;
+#X connect 2 0 13 1;
+#X connect 3 0 13 2;
+#X connect 5 0 26 0;
+#X connect 5 1 23 0;
+#X connect 6 1 7 0;
+#X connect 7 0 11 0;
+#X connect 8 0 9 0;
+#X connect 9 0 61 0;
+#X connect 9 0 59 0;
+#X connect 9 1 45 0;
+#X connect 10 0 8 0;
+#X connect 11 0 8 0;
+#X connect 14 0 15 0;
+#X connect 16 0 17 0;
+#X connect 17 0 52 0;
+#X connect 18 0 13 0;
+#X connect 19 0 20 0;
+#X connect 19 0 21 0;
+#X connect 20 0 10 0;
+#X connect 21 0 8 0;
+#X connect 22 0 10 0;
+#X connect 22 0 19 0;
+#X connect 23 0 6 0;
+#X connect 24 0 25 0;
+#X connect 25 0 6 0;
+#X connect 26 0 13 0;
+#X connect 27 0 28 0;
+#X connect 27 1 16 0;
+#X connect 27 1 29 0;
+#X connect 28 0 26 4;
+#X connect 28 0 30 0;
+#X connect 29 0 26 4;
+#X connect 30 0 13 0;
+#X connect 31 0 36 0;
+#X connect 32 0 36 0;
+#X connect 33 0 34 0;
+#X connect 35 0 17 1;
+#X connect 36 0 33 0;
+#X connect 38 0 46 0;
+#X connect 39 0 38 0;
+#X connect 40 0 44 0;
+#X connect 41 0 22 0;
+#X connect 41 1 42 0;
+#X connect 42 0 41 0;
+#X connect 43 0 41 0;
+#X connect 44 0 39 0;
+#X connect 45 0 0 0;
+#X connect 46 0 55 0;
+#X connect 46 1 8 0;
+#X connect 46 2 13 0;
+#X connect 52 0 48 0;
+#X connect 52 0 13 0;
+#X connect 55 1 27 0;
+#X connect 56 0 58 0;
+#X connect 56 1 52 0;
+#X connect 57 0 13 0;
+#X connect 58 0 57 0;
+#X connect 60 0 0 0;
+#X connect 61 0 0 0;

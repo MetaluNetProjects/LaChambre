@@ -1,0 +1,10 @@
+#N canvas 620 582 450 300 10;
+#X declare -stdpath Fraise;
+#X obj 110 56 PdClient \$0 pi;
+#X obj 110 96 FraiseNet \$0;
+#X obj 111 28 declare -stdpath Fraise;
+#X obj 109 128 fruit/fruit 1 fruit1 10;
+#X obj 122 198 fruit/receive fruit1;
+#X obj 122 230 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X connect 4 0 5 0;
